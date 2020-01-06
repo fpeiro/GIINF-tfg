@@ -1,0 +1,22 @@
+## YAML Template.
+---
+
+spring.datasource.driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
+spring.datasource.url: jdbc:derby:evalapp;create=true
+spring.datasource.username: evalapp
+spring.datasource.password: evalapp
+spring.datasource.tomcat.max-active: 50
+spring.datasource.tomcat.max-idle: 50
+
+server.port: 8443
+server.ssl.key-store: keystore.p12
+server.ssl.key-store-password: evalapp
+server.ssl.keyStoreType: PKCS12
+server.ssl.keyAlias: tomcat
+
+spring.jpa.hibernate.ddl-auto: update
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.DerbyTenSevenDialect
+spring.jpa.show-sql: true
+spring.jpa.open-in-view: true
+#spring.datasource.initialize: true
+#spring.jpa.properties.hibernate.current_session_context_class: org.springframework.orm.hibernate4.SpringSessionContext
